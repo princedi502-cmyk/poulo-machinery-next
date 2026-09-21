@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://poulomachinery.com/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://poulomachinery.com/images/air-jet-loom-poulo-machinery-surat.webp</image:loc>
+      <image:title>POULO Air Jet Loom - Surat Manufacturer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://poulomachinery.com/images/water-jet-loom-poulo-machinery-surat.webp</image:loc>
+      <image:title>POULO Water Jet Loom - Surat Manufacturer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://poulomachinery.com/images/poulo-machinery-factory-aerial-surat.webp</image:loc>
+      <image:title>Poulo Machinery Factory - Aerial View</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://poulomachinery.com/images/poulo-machinery-production-floor-surat.webp</image:loc>
+      <image:title>Poulo Machinery Production Floor - Surat</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://poulomachinery.com/poulo-logo.webp</image:loc>
+      <image:title>Poulo Machinery Logo</image:title>
+    </image:image>
+  </url>
+</urlset>
