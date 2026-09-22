@@ -1,8 +1,10 @@
 import React from 'react';
-import { MapPin, Phone, Mail, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import QuoteForm from '@/components/QuoteForm';
 import { COMPANY_CONTACT, constructMetadata } from '@/lib/seo';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
+import { InstagramIcon, FacebookIcon } from '@/components/SocialIcons';
 
 export const metadata = constructMetadata({
   title: 'Contact Us & Request a Quote | Poulo Machinery Surat',
@@ -45,7 +47,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded shadow-sm transition-colors flex items-center gap-2"
             >
-              <MessageSquare size={16} />
+              <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
               <span>WhatsApp Sales Chat</span>
             </a>
             <a
@@ -94,6 +96,34 @@ export default function ContactPage() {
                   <strong className="text-slate-900 block mb-0.5">Email:</strong>
                   <span>{COMPANY_CONTACT.email}</span>
                 </div>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="pt-4 border-t border-slate-100 space-y-2">
+              <strong className="text-slate-900 text-xs block font-semibold uppercase tracking-wider text-slate-500">
+                Follow Us
+              </strong>
+              <div className="flex items-center gap-3">
+                <a
+                  href={COMPANY_CONTACT.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Poulo Machinery on Instagram"
+                  className="w-9 h-9 rounded-lg border border-slate-200 bg-slate-50 flex items-center justify-center text-slate-600 hover:text-blue-700 hover:bg-blue-50 hover:border-blue-200 transition-all"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={COMPANY_CONTACT.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Poulo Machinery on Facebook"
+                  className="w-9 h-9 rounded-lg border border-slate-200 bg-slate-50 flex items-center justify-center text-slate-600 hover:text-blue-700 hover:bg-blue-50 hover:border-blue-200 transition-all"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+                <span className="text-xs font-medium text-slate-500">{COMPANY_CONTACT.social.handle}</span>
               </div>
             </div>
           </div>

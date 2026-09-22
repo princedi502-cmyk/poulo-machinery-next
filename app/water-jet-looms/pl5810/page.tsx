@@ -5,6 +5,7 @@ import { CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SpecTable from '@/components/SpecTable';
 import QuoteForm from '@/components/QuoteForm';
+import ProductGallery from '@/components/ProductGallery';
 import { constructMetadata, getProductSchema } from '@/lib/seo';
 import { PL5810_WATER_JET_LOOM, PL920_AIR_JET_LOOM } from '@/lib/specs';
 
@@ -44,29 +45,8 @@ export default function PL5810Page() {
       <section className="max-w-[1280px] mx-auto px-4 space-y-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Gallery / Images */}
-          <div className="lg:col-span-6 space-y-4">
-            <div className="relative h-72 sm:h-96 rounded-lg overflow-hidden border border-slate-200 bg-white shadow-sm">
-              <Image
-                src={model.heroImage}
-                alt={model.name}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-
-            <div className="grid grid-cols-4 gap-2">
-              {model.galleryImages.map((img, idx) => (
-                <div key={idx} className="relative h-20 rounded border border-slate-200 overflow-hidden bg-slate-100">
-                  <Image
-                    src={img}
-                    alt={`${model.name} detail shot ${idx + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="lg:col-span-6">
+            <ProductGallery images={model.galleryImages} alt={model.name} />
           </div>
 
           {/* Model Summary & Specs Highlights */}

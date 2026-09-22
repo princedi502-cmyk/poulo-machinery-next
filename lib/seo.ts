@@ -14,6 +14,11 @@ export const COMPANY_CONTACT = {
   whatsappRaw: '918141722722',
   contactPerson: 'Jeel Anghan',
   email: 'poulomachinery@gmail.com',
+  social: {
+    handle: '@poulomachinery',
+    instagram: 'https://instagram.com/poulomachinery',
+    facebook: 'https://www.facebook.com/people/Poulo-Machinery/61572346245996/',
+  },
 };
 
 export interface SEOProps {
@@ -81,6 +86,10 @@ export function getOrganizationSchema() {
       areaServed: 'IN',
       availableLanguage: ['English', 'Hindi', 'Gujarati'],
     },
+    sameAs: [
+      COMPANY_CONTACT.social.instagram,
+      COMPANY_CONTACT.social.facebook,
+    ],
   };
 }
 

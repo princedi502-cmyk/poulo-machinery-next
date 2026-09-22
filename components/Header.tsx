@@ -3,9 +3,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Phone, MessageSquare } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { COMPANY_CONTACT } from '@/lib/seo';
 import { trackEvent } from '@/lib/analytics';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,7 +53,7 @@ export default function Header() {
               onClick={handleWhatsAppClick}
               className="text-emerald-400 hover:text-emerald-300 flex items-center gap-1 font-medium transition-colors"
             >
-              <MessageSquare size={12} />
+              <WhatsAppIcon className="w-3.5 h-3.5 fill-current shrink-0" />
               <span>WhatsApp Us</span>
             </a>
             <span className="hidden sm:inline text-slate-500">|</span>
@@ -68,9 +69,9 @@ export default function Header() {
           <Image
             src="/poulo-logo.webp"
             alt="Poulo Machinery"
-            width={160}
-            height={48}
-            className="h-10 w-auto object-contain"
+            width={44}
+            height={44}
+            className="w-11 h-11 rounded-full object-cover ring-1 ring-blue-600/15"
             priority
           />
         </Link>
@@ -197,7 +198,7 @@ export default function Header() {
               onClick={handleWhatsAppClick}
               className="w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-md shadow-sm transition-colors flex items-center justify-center gap-2"
             >
-              <MessageSquare size={16} />
+              <WhatsAppIcon className="w-4 h-4 fill-current shrink-0" />
               <span>WhatsApp Sales Enquiry</span>
             </a>
           </div>

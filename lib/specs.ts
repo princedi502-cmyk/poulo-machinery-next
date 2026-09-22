@@ -33,12 +33,12 @@ export const PL920_AIR_JET_LOOM: LoomModel = {
   tagline: 'High-speed, energy-efficient air jet weaving system engineered for fine cotton, synthetic, and blended fabric production.',
   type: 'air-jet',
   categoryName: 'Air Jet Looms',
-  heroImage: '/images/air-jet-loom-poulo-machinery-surat.webp',
+  heroImage: '/images/poulo-machinery-loom-2-surat.webp',
   galleryImages: [
-    '/images/air-jet-loom-poulo-machinery-surat.webp',
+    '/images/poulo-machinery-loom-2-surat.webp',
     '/images/air-jet-loom-speed-weaving-surat.webp',
     '/images/poulo-machinery-loom-1-surat.webp',
-    '/images/poulo-machinery-loom-2-surat.webp',
+    '/images/air-jet-loom-poulo-machinery-surat.webp',
   ],
   overview: [
     'The PL920 High-Speed Air Jet Loom is engineered for high-performance weaving with stable weft insertion, optimized airflow dynamics, and low vibration structure.',

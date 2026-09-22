@@ -89,10 +89,12 @@ export default function AirJetCategoryPage() {
         <div className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8">
           <div className="lg:col-span-5 relative min-h-[250px] bg-slate-100 rounded overflow-hidden">
             <Image
-              src="/images/air-jet-loom-poulo-machinery-surat.webp"
+             
+              src="/images/poulo-machinery-air-jet-loom-pl920-surat.webp"
               alt="PL920 High Speed Air Jet Loom"
               fill
-              className="object-cover"
+            
+              className="object-contain p-3"
             />
           </div>
 

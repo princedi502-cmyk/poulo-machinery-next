@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react';
 import { COMPANY_CONTACT } from '@/lib/seo';
+import { InstagramIcon, FacebookIcon } from '@/components/SocialIcons';
 
 export default function Footer() {
   return (
@@ -13,9 +14,9 @@ export default function Footer() {
           <Image
             src="/poulo-logo.webp"
             alt="Poulo Machinery"
-            width={160}
-            height={48}
-            className="h-10 w-auto object-contain brightness-200"
+            width={44}
+            height={44}
+            className="w-11 h-11 rounded-full object-cover ring-1 ring-slate-700"
           />
           <p className="text-slate-400 text-xs leading-relaxed">
             Poulo Machinery is an India-side importer and supplier of high-speed Air Jet and Water Jet weaving looms based in Surat, Gujarat.
@@ -118,9 +119,29 @@ export default function Footer() {
       {/* Legal & Copyright */}
       <div className="max-w-[1280px] mx-auto px-4 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
         <p>© {new Date().getFullYear()} Poulo Machinery. All rights reserved.</p>
-        <p className="text-center md:text-right">
-          Poulo Machinery is an India-side supplier. Machine specs subject to configuration.
-        </p>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            <a
+              href={COMPANY_CONTACT.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram — @poulomachinery"
+              className="text-slate-400 hover:text-white transition-colors p-1"
+            >
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={COMPANY_CONTACT.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook — @poulomachinery"
+              className="text-slate-400 hover:text-white transition-colors p-1"
+            >
+              <FacebookIcon className="w-4 h-4" />
+            </a>
+          </div>
+          <span className="font-mono text-slate-400 text-xs">{COMPANY_CONTACT.social.handle}</span>
+        </div>
       </div>
     </footer>
   );

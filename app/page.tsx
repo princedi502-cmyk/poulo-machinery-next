@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, CheckCircle2, ShieldCheck, Factory, MessageSquare, Phone, Mail } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, Factory, Phone, Mail } from 'lucide-react';
 import QuoteForm from '@/components/QuoteForm';
+import HeroButtons from '@/components/HeroButtons';
+import HeroImageSlider from '@/components/HeroImageSlider';
 import { COMPANY_CONTACT, constructMetadata } from '@/lib/seo';
 import { PL920_AIR_JET_LOOM, PL5810_WATER_JET_LOOM } from '@/lib/specs';
 
@@ -17,7 +19,7 @@ export default function HomePage() {
   return (
     <div className="space-y-16 pb-16">
       {/* 1. HERO SECTION (LCP Element Optimized) */}
-      <section className="bg-slate-900 text-white pt-12 pb-16 px-4 border-b border-slate-800">
+      <section className="bg-slate-900 text-white pt-16 pb-24 sm:py-24 px-4 border-b border-slate-800 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 bg-blue-900/80 text-blue-300 border border-blue-700/60 px-3 py-1 rounded-full text-xs font-semibold">
@@ -33,30 +35,7 @@ export default function HomePage() {
               Based in Surat, Gujarat, Poulo Machinery supplies selected high-speed weaving loom systems sourced from Qingdao Jinxin Hejia Machinery Co., Ltd., China.
             </p>
 
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Link
-                href="/contact/"
-                className="bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm px-6 py-3 rounded shadow-md transition-colors flex items-center gap-2"
-              >
-                <span>Request a Quote</span>
-                <ArrowRight size={16} />
-              </Link>
-              <Link
-                href="#product-families"
-                className="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm px-6 py-3 rounded transition-colors"
-              >
-                View Loom Models
-              </Link>
-              <a
-                href={`https://wa.me/${COMPANY_CONTACT.whatsappRaw}?text=Hello%20Poulo%20Machinery,%20I%20am%20interested%20in%20your%20weaving%20looms.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-5 py-3 rounded transition-colors flex items-center gap-2"
-              >
-                <MessageSquare size={16} />
-                <span>WhatsApp Us</span>
-              </a>
-            </div>
+            <HeroButtons />
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800 text-xs text-slate-300">
               <div>
@@ -74,19 +53,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative rounded-lg overflow-hidden border border-slate-700 shadow-2xl bg-slate-800 aspect-[16/11]">
-            <Image
-              src="/images/air-jet-loom-poulo-machinery-surat.webp"
-              alt="High-Speed Air Jet Loom supplied by Poulo Machinery"
-              fill
-              sizes="(max-width: 1024px) 100vw, 500px"
-              className="object-cover"
-              priority
-            />
-            <div className="absolute bottom-0 inset-x-0 bg-slate-900/90 p-3 text-xs text-slate-300 border-t border-slate-700">
-              <span className="font-semibold text-blue-400">Featured Machine:</span> PL920 High-Speed Air Jet Loom System
-            </div>
-          </div>
+          <HeroImageSlider />
         </div>
       </section>
 
@@ -101,15 +68,16 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Air Jet Category Card */}
-          <div className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <div className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group">
             <div className="relative aspect-[16/10] bg-slate-100">
               <Image
-                src="/images/air-jet-loom-poulo-machinery-surat.webp"
+                src="/images/poulo-machinery-air-jet-loom-pl920-surat.webp"
                 alt="Air Jet Looms"
                 fill
                 sizes="(max-width: 768px) 100vw, 600px"
                 loading="lazy"
-                className="object-cover"
+                // className="object-contain p-3"
+                className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
@@ -146,7 +114,7 @@ export default function HomePage() {
           </div>
 
           {/* Water Jet Category Card */}
-          <div className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+          <div className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group">
             <div className="relative aspect-[16/10] bg-slate-100">
               <Image
                 src="/images/water-jet-loom-poulo-machinery-surat.webp"
@@ -154,7 +122,8 @@ export default function HomePage() {
                 fill
                 sizes="(max-width: 768px) 100vw, 600px"
                 loading="lazy"
-                className="object-cover"
+                // className="object-contain p-3"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
